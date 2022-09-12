@@ -7,6 +7,12 @@ const config: PlaywrightTestConfig = {
       trace: 'on-first-retry' // trace only when a test fail
       // trace: 'retain-on-failure' // can be heavy
     },
+    webServer: {
+      command: 'http-server -p 5000 ./',
+      url: 'http://127.0.0.1:5000/',
+      reuseExistingServer: true,
+      timeout: 2_000
+    },
     projects: [
         {
           name: 'chromium',

@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-test.describe.only('Wikipedia', () => {
+test.describe/*.only*/('Wikipedia', () => {
 
     test.beforeEach(async ({ page }) => {
         await page.goto('https://grafikart.fr/tutoriels/cypress-993')
