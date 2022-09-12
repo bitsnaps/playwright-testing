@@ -1,5 +1,7 @@
 # Playwright for testing
 
+Example from Grafikart's video on [Youtube](https://www.youtube.com/watch?v=UgF2LwlNnC8).
+
 ## Install dependencies
 
 ```bash
