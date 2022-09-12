@@ -11,6 +11,11 @@ pnpm add -D @playwright/test
 pnpx playwright test --headed
 ```
 
+## Report to HTML page
+```bash
+pnpx playwright show-report
+```
+
 You can use [Dockerfile](https://github.com/microsoft/playwright/blob/main/utils/docker/Dockerfile.focal) to run on multiple browsers, example:
 ```bash
 docker run -it --rm --ipc=host mcr.microsoft.com/playwright:v1.25.0-focal /bin/bash
