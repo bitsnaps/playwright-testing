@@ -1,7 +1,7 @@
 import { devices, PlaywrightTestConfig } from "@playwright/test";
 
 const config: PlaywrightTestConfig = {
-    timeout: 20_000,
+    timeout: 20 * 1000,
     retries: 1,
     use: {
       trace: 'on-first-retry' // trace only when a test fail
