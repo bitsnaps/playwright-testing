@@ -25,3 +25,6 @@ docker run -it --rm --ipc=host mcr.microsoft.com/playwright:v1.25.0-focal /bin/b
 ```bash
 pnpx playwright codegen wikipedia.org
 ```
+
+## Tracing
+You can trace execution by adding `trace: 'on-first-retry'` to the configuration file `playwright.config.ts`, you can also upload the generated zip file (in case of test failure) in `./test-results/[NAME_OF_YOUR_TEST]/trace.zip` directory to the web page: [trace.playwright.dev](https://trace.playwright.dev/), you can also pass a URL of the `trace.zip` file to that web page.

@@ -1,7 +1,12 @@
 import { devices, PlaywrightTestConfig } from "@playwright/test";
 
 const config: PlaywrightTestConfig = {
-    timeout: 20000,
+    timeout: 20_000,
+    retries: 1,
+    use: {
+      trace: 'on-first-retry' // trace only when a test fail
+      // trace: 'retain-on-failure' // can be heavy
+    },
     projects: [
         {
           name: 'chromium',

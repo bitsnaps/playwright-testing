@@ -12,8 +12,10 @@ test.describe/*.only*/('Wikipedia', () => {
     test.only('Find TypeScript page in french', async ({ page }) => {
         await page.locator('[placeholder="Rechercher sur Wikipédia"]').click()
         await page.keyboard.type('typescript')
+        await expect(page.locator('#cdx-typeahead-search-menu-0')).toBeVisible()
         await page.keyboard.press('Enter')
-        await expect( page.locator('h1').first() ).toHaveText(/Résultats de la recherche/)    
+        // await page.pause()
+        await expect(page.locator('h1').first()).toHaveText(/TypeScript/)    
   })
 
 })
